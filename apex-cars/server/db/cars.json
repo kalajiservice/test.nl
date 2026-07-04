@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "make": "Apex",
+    "model": "Eclipse GT",
+    "year": 2022,
+    "price": 54999,
+    "mileage": 12000,
+    "images": ["https://images.unsplash.com/photo-1511914265870-4d12b2b3a0a1?w=1200&auto=format&fit=crop&q=80"],
+    "description": "High-performance coupe with aggressive styling and a refined interior."
+  },
+  {
+    "id": 2,
+    "make": "Apex",
+    "model": "Summit LX",
+    "year": 2021,
+    "price": 39999,
+    "mileage": 22000,
+    "images": ["https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&auto=format&fit=crop&q=80"],
+    "description": "Luxury crossover with advanced safety and a spacious cabin."
+  },
+  {
+    "id": 3,
+    "make": "Vector",
+    "model": "Racer V8",
+    "year": 2023,
+    "price": 89999,
+    "mileage": 3000,
+    "images": ["https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&auto=format&fit=crop&q=80"],
+    "description": "Supercar-grade performance combined with daily usability." 
+  },
+  {
+    "id": 4,
+    "make": "Orbit",
+    "model": "Commuter",
+    "year": 2020,
+    "price": 17999,
+    "mileage": 55000,
+    "images": ["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1200&auto=format&fit=crop&q=80"],
+    "description": "Efficient compact hatch ideal for city driving." 
+  },
+  {
+    "id": 5,
+    "make": "Apex",
+    "model": "Trailblazer",
+    "year": 2022,
+    "price": 45999,
+    "mileage": 8000,
+    "images": ["https://images.unsplash.com/photo-1601758123927-6c10f3f9b7b2?w=1200&auto=format&fit=crop&q=80"],
+    "description": "Rugged SUV with off-road capability and modern tech." 
+  },
+  {
+    "id": 6,
+    "make": "Vector",
+    "model": "Rapid R",
+    "year": 2019,
+    "price": 29999,
+    "mileage": 40000,
+    "images": ["https://images.unsplash.com/photo-1519643381401-22c77e60520e?w=1200&auto=format&fit=crop&q=80"],
+    "description": "Sport sedan with balanced dynamics and a refined interior." 
+  }
+]

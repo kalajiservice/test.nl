@@ -5,6 +5,12 @@ import Register from './pages/Register';
 import ResetPassword from './pages/ResetPassword';
 import Service from './pages/Service';
 import Warranty from './pages/Warranty';
+import Home from './pages/Home';
+import Inventory from './pages/Inventory';
+import CarDetail from './pages/CarDetail';
+import BookTestDrive from './pages/BookTestDrive';
+import Financing from './pages/Financing';
+import Contact from './pages/Contact';
 
 // Tijdelijke simpele Layout wrapper
 const SimpleLayout = ({ children }) => (
@@ -22,12 +28,18 @@ export default function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<SimpleLayout><Home /></SimpleLayout>} />
+        <Route path="/inventory" element={<SimpleLayout><Inventory /></SimpleLayout>} />
+        <Route path="/car/:id" element={<SimpleLayout><CarDetail /></SimpleLayout>} />
+        <Route path="/book" element={<SimpleLayout><BookTestDrive /></SimpleLayout>} />
+        <Route path="/financing" element={<SimpleLayout><Financing /></SimpleLayout>} />
+        <Route path="/contact" element={<SimpleLayout><Contact /></SimpleLayout>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/service" element={<SimpleLayout><Service /></SimpleLayout>} />
         <Route path="/warranty" element={<SimpleLayout><Warranty /></SimpleLayout>} />
-        <Route path="*" element={<SimpleLayout><Service /></SimpleLayout>} />
+        <Route path="*" element={<SimpleLayout><Inventory /></SimpleLayout>} />
       </Routes>
     </Router>
   );
