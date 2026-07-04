@@ -15,13 +15,15 @@ export default function BookTestDrive(){
   const location = useLocation();
   useEffect(()=>{
     if (location.state?.carId) setCarId(location.state.carId);
-    fetch('/api/cars').then(r=>r.json()).then(setCars).catch(()=>setCars([]));
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    fetch(`${API_BASE}/cars`).then(r=>r.json()).then(setCars).catch(()=>setCars([]));
   },[]);
 
   const submit = async (e) => {
     e.preventDefault();
     const payload = { carId, name, email, phone, date, time, deposit };
-    const res = await fetch('/api/bookings', { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(payload)});
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    const res = await fetch(`${API_BASE}/bookings`, { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(payload)});
     const data = await res.json();
     if (data.success) setMessage('Booking confirmed — ID ' + data.id);
     else setMessage('Could not book — try again');

@@ -25,7 +25,8 @@ export default function Financing(){
   const submit = async (e) => {
     e.preventDefault();
     const payload = { name, email, budget, price, down, rate, term };
-    await fetch('/api/finance', { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(payload)});
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    await fetch(`${API_BASE}/finance`, { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify(payload)});
     alert('Pre-qualification request sent');
   };
 

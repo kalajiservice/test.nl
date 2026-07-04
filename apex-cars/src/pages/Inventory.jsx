@@ -8,7 +8,8 @@ export default function Inventory() {
   const [maxPrice, setMaxPrice] = useState('');
 
   useEffect(() => {
-    fetch('/api/cars').then(r=>r.json()).then(setCars).catch(()=>setCars([]));
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    fetch(`${API_BASE}/cars`).then(r=>r.json()).then(setCars).catch(()=>setCars([]));
   }, []);
 
   const filtered = cars.filter(c => {

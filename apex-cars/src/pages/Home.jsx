@@ -5,7 +5,8 @@ export default function Home() {
   const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
-    fetch('/api/cars')
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    fetch(`${API_BASE}/cars`)
       .then(r => r.json())
       .then(data => setFeatured(data.slice(0, 3)))
       .catch(() => setFeatured([]));

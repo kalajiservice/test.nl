@@ -6,7 +6,8 @@ export default function CarDetail(){
   const [car, setCar] = useState(null);
 
   useEffect(()=>{
-    fetch(`/api/cars/${id}`).then(r=>r.json()).then(setCar).catch(()=>setCar(null));
+    const API_BASE = import.meta.env.DEV ? '/api' : 'http://localhost:4000';
+    fetch(`${API_BASE}/cars/${id}`).then(r=>r.json()).then(setCar).catch(()=>setCar(null));
   },[id]);
 
   if (!car) return <div className="p-8">Loading...</div>;

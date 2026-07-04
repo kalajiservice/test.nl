@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "server": "node server/index.js",
+    "server": "node server/index.cjs",
     "lint": "eslint . --quiet",
     "preview": "vite preview"
   },
@@ -15,6 +15,8 @@
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.475.0",
     "react": "^18.2.0",
